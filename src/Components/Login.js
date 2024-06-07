@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function LoginPage(){
+function LoginPage(props){
     // var count=0;
 
     // const [counter,setCounter] = useState(0);
@@ -8,14 +8,14 @@ function LoginPage(){
     const [password,setPassword]=useState("");
 
     function checkLogin(){
-        if(userName !== ""){
-            if(password !== ""){
+        if(userName === props.registerUserName){
+            if(password === props.registerPassword){
                     alert("Login Success")
             }else{
-                alert("password is required")
+                alert("password is not matching with registration page")
             }
         }else{
-            alert("UserName is required")
+            alert("UserName is not matching with registration page")
         }
     }
 

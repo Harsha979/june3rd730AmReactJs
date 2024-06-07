@@ -1,21 +1,21 @@
 import React from "react";
 
-function FirstComponent(){
+function FirstComponent(props){
 
     return(
         //html code
         <div>
-            <h1>hello this is my FirstComponent</h1>
-            <SecondComponent />
+            <h1>{props.propsName} hello this is my FirstComponent</h1>
+            <SecondComponent propsName={props.propsName}/>
         </div>
     )
 }
 
-function SecondComponent(){
+function SecondComponent({propsName}){
 
     return(
         <div>
-            <h1>hello this is SecondComponent</h1>
+            <h1>{propsName} hello this is SecondComponent</h1>
         </div>
     )
 }
