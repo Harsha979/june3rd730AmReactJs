@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import LoginPage from "./Login";
+import { useNavigate } from "react-router-dom";
 
 function RegistrationPage(){
 
@@ -7,6 +8,7 @@ function RegistrationPage(){
     const [password,setPassword]=useState("");
     const [mobileNumber,setMobileNumber]=useState("");
     const [address,setAddress]=useState("");
+    const navigate=useNavigate();
 
     function checkRegister(){
         if(userName !== ""){
@@ -14,6 +16,7 @@ function RegistrationPage(){
                     if(mobileNumber !== ""){
                             if(address !== ""){
                                 alert("Registration success")
+                                navigate("/login")
                             }
                             else{
                                 alert("address is required")
@@ -41,7 +44,7 @@ function RegistrationPage(){
             <label>Address</label>
             <input type="text" value={address} onChange={(e)=>{setAddress(e.target.value)}}></input>
             <button onClick={()=>{checkRegister()}}>Register</button>
-            <LoginPage registerUserName={userName} registerPassword={password}/>
+            {/* <LoginPage registerUserName={userName} registerPassword={password}/> */}
         </div>
     )
 }
