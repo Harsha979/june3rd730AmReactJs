@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import LoginPage from "./Login";
 import { useNavigate } from "react-router-dom";
+import NavBar from "./NavBar";
 
 function RegistrationPage(){
 
@@ -33,6 +34,8 @@ function RegistrationPage(){
     }
 
     return(
+        <div>
+            <NavBar/>
         <div style={{display:"grid",placeContent:"center"}}>
             <h1>RegistrationPage</h1>
             <label>UserName</label>
@@ -45,6 +48,7 @@ function RegistrationPage(){
             <input type="text" value={address} onChange={(e)=>{setAddress(e.target.value)}}></input>
             <button onClick={()=>{checkRegister()}}>Register</button>
             {/* <LoginPage registerUserName={userName} registerPassword={password}/> */}
+        </div>
         </div>
     )
 }

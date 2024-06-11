@@ -40,3 +40,11 @@
 .header2{
   color: blue;
 }
+
+.NavBar{
+  background: grey;
+  display: flex;
+  justify-content: space-evenly;
+  height: 9vh;
+  align-items: center
+}

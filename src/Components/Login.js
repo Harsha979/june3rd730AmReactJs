@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import NavBar from "./NavBar";
 
 function LoginPage(){
     // var count=0;
@@ -23,6 +24,8 @@ function LoginPage(){
     }
 
     return(
+        <div>
+            <NavBar/>
         <div style={{display:"grid",placeContent:"center"}}>
             <h1>LoginPage</h1>
             <label>UserName</label>
@@ -35,6 +38,7 @@ function LoginPage(){
             count is : {count}
             <button onClick={()=>setCounter((count)=>count+1)}>updateCounter</button>
             counter is : {counter} */}
+        </div>
         </div>
     )
 }
