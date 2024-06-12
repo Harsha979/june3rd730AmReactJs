@@ -8,6 +8,7 @@ import LoginPage from './Components/Login';
 import RegistrationPage from './Components/Registration';
 import HomePage from './Components/HomePage';
 import ContactPage from './Components/Contact';
+import UseRef from './Components/UseRef';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,6 +19,7 @@ root.render(
                         <Route path='/registration' element={<RegistrationPage/>}></Route>
                         <Route path='/homepage' element={<HomePage/>}></Route>
                         <Route path='/contact' element={<ContactPage/>}></Route>
+                        <Route path='/ref' element={<UseRef/>}></Route>
                 </Routes>
         </BrowserRouter>
 

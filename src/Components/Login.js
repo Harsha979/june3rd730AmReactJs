@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import NavBar from "./NavBar";
 
@@ -9,6 +9,14 @@ function LoginPage(){
     const [userName,setUsername]=useState("");
     const [password,setPassword]=useState("");
     const navigate=useNavigate();
+
+    // useEffect(()=>{
+    //         console.log("login page called");
+    //         if(userName){
+    //             alert("some one is changing username")
+    //         }
+    // },[userName,password])
+
 
     function checkLogin(){
         if(userName !== ""){
