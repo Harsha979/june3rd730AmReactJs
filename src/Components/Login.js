@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useReducer, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import NavBar from "./NavBar";
+import { ValuesReducer, initialState } from "./Reducer";
 
 function LoginPage(){
     // var count=0;
@@ -9,25 +10,23 @@ function LoginPage(){
     const [userName,setUsername]=useState("");
     const [password,setPassword]=useState("");
     const navigate=useNavigate();
+    const [values,dispatch]=useReducer(ValuesReducer,initialState);
 
-    // useEffect(()=>{
-    //         console.log("login page called");
-    //         if(userName){
-    //             alert("some one is changing username")
-    //         }
-    // },[userName,password])
+    useEffect(()=>{
+            console.log(values);
+    },[])
 
 
     function checkLogin(){
-        if(userName !== ""){
-            if(password !== ""){
+        if(userName === values.userName){
+            if(password === values.password){
                     alert("Login Success")
                     navigate("/homepage")
             }else{
-                alert("password is required")
+                alert("password is not matching with registration page")
             }
         }else{
-            alert("UserName is required")
+            alert("UserName is not matching with registration page")
         }
     }
 

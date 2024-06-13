@@ -1,10 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useReducer } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import NavBar from "./NavBar";
+import { ValuesReducer, initialState } from "./Reducer";
 
 function HomePage(){
 
     const navigate=useNavigate();
+    const [values,dispatch]=useReducer(ValuesReducer,initialState);
 
     var fruitsArray=["apple","banana","pineapple","mango"];
 
@@ -18,7 +20,7 @@ function HomePage(){
     return(
         <div>
             <NavBar/>
-            <h1>HomePage Besant</h1>
+            <h1>Welcome to HomePage {values.userName}</h1>
             <h1>fruitsArrayNames</h1>
             {fruitsArray.map((name,index)=>{
                     return <div>{name+index}</div>;

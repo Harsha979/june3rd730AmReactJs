@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useReducer, useState } from "react";
 import LoginPage from "./Login";
 import { useNavigate } from "react-router-dom";
 import NavBar from "./NavBar";
+import { ValuesReducer, initialState } from "./Reducer";
 
 function RegistrationPage(){
 
@@ -10,12 +11,14 @@ function RegistrationPage(){
     const [mobileNumber,setMobileNumber]=useState("");
     const [address,setAddress]=useState("");
     const navigate=useNavigate();
+    const [values,dispatch]=useReducer(ValuesReducer,initialState)
 
-    function checkRegister(){
+    async function checkRegister(){
         if(userName !== ""){
               if(password !==""){
                     if(mobileNumber !== ""){
                             if(address !== ""){
+                                await dispatch({type:"VALUES",userName:userName,password:password})
                                 alert("Registration success")
                                 navigate("/login")
                             }
