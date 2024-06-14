@@ -9,6 +9,7 @@ import RegistrationPage from './Components/Registration';
 import HomePage from './Components/HomePage';
 import ContactPage from './Components/Contact';
 import UseRef from './Components/UseRef';
+import UseContext from './Components/UseContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -20,6 +21,7 @@ root.render(
                         <Route path='/homepage' element={<HomePage/>}></Route>
                         <Route path='/contact' element={<ContactPage/>}></Route>
                         <Route path='/ref' element={<UseRef/>}></Route>
+                        <Route path='/usecontext' element={<UseContext/>}></Route>
                 </Routes>
         </BrowserRouter>
 
