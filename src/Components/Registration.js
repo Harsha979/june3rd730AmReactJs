@@ -38,7 +38,7 @@ function RegistrationPage(){
 
     return(
         <div>
-            <NavBar/>
+            <NavBar name={userName}/>
         <div style={{display:"grid",placeContent:"center"}}>
             <h1>RegistrationPage</h1>
             <label>UserName</label>

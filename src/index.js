@@ -10,6 +10,7 @@ import HomePage from './Components/HomePage';
 import ContactPage from './Components/Contact';
 import UseRef from './Components/UseRef';
 import UseContext from './Components/UseContext';
+import UserMemo from './Components/UseMemo';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -22,6 +23,7 @@ root.render(
                         <Route path='/contact' element={<ContactPage/>}></Route>
                         <Route path='/ref' element={<UseRef/>}></Route>
                         <Route path='/usecontext' element={<UseContext/>}></Route>
+                        <Route path='/usememo' element={<UserMemo/>}></Route>
                 </Routes>
         </BrowserRouter>
 

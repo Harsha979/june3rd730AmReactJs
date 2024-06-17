@@ -1,9 +1,9 @@
-import React from "react";
+import React, { memo } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
 
-function NavBar(){
-
+function NavBar(props){
+    console.log("nav bar is getting called"+props.name);
     return(
         <div className="NavBar">
             <Link to="/">MAIN</Link>
@@ -15,4 +15,4 @@ function NavBar(){
     )
 }
 
-export default NavBar;
+export default memo(NavBar);
