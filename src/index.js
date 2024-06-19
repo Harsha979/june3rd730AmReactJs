@@ -12,6 +12,7 @@ import UseRef from './Components/UseRef';
 import UseContext from './Components/UseContext';
 import UserMemo from './Components/UseMemo';
 import ApiCalls from './Components/ApiCalls';
+import FirstClassComponent from './Components/ClassComponent';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -26,6 +27,7 @@ root.render(
                         <Route path='/usecontext' element={<UseContext/>}></Route>
                         <Route path='/usememo' element={<UserMemo/>}></Route>
                         <Route path='/apicalls' element={<ApiCalls/>}></Route>
+                        <Route path='/classcomponent' element={<FirstClassComponent/>}></Route>
                 </Routes>
         </BrowserRouter>
 
